@@ -1,60 +1,89 @@
-/* Réinitialisation des styles par défaut des navigateurs */
-body, h1, h2, p, ul, li {
-  margin: 0;
-  padding: 0;
-}
-
-/* Styles généraux */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
-  background-color: #f2f2f2;
+    overflow: hidden; /* Disable scrolling */
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
+
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Changed height to min-height */
+    overflow: hidden; /* Prevent scrolling */
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
+.banner {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 100%; /* Ensure the image doesn't exceed the viewport width */
+    max-height: 100%; /* Ensure the image doesn't exceed the viewport height */
 }
 
-header h1 {
-  margin: 0;
-  padding: 10px;
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-nav ul {
-  list-style-type: none;
+.menu-item {
+    display: inline-block;
+    margin: 10px;
+    padding: 0;
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.5s;
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 10px;
+.menu-item a {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    color: white;
+    text-decoration: none;
+    line-height: 100px;
+    clip-path: polygon(50% 0%, 100% 27%, 100% 73%, 50% 100%, 0% 73%, 0% 27%);
 }
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
+.menu-item a:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    bottom: -5px;
+    right: -5px;
+    background: linear-gradient(to right, #006400, #FFFFFF, #000000);
+    background-size: 300% 100%;
+    background-position: right bottom;
+    transition: all 2s ease;
+    z-index: -1;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
-section {
-  background-color: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
+.menu-item a:hover:before {
+    background-position: left bottom;
 }
 
-section h2 {
-  margin-bottom: 10px;
+.menu-item a:hover:before {
+    background-position: left bottom;
 }
 
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
+.menu-item:hover {
+    transform: scale(1.1);
+}
+
+.menu-item a:hover {
+    background-color: #111;
+}
+
+body {
+    background-image: url('https://images.unsplash.com/photo-1589487391730-58f20eb2c308?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80');
+    background-repeat: no-repeat;
+    background-position: cr;
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
