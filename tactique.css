@@ -42,6 +42,7 @@ body {
 .section h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    text-decoration: underline;
 }
 
 .section p {
@@ -92,7 +93,7 @@ body {
 }
 
 .section-ultradefensif {
-    background-color: #95a5a6;
+    background-color: #e67e22;
 }
 .section-contre-attaques-directes {
     background-color: #3498db;
@@ -160,4 +161,57 @@ body {
     font-size: 24px;
     color: #FFF;
     cursor: pointer;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #FFF;
+    padding: 10px;
+    z-index: 100;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li:not(:last-child) {
+    border-right: 1px solid #FFF;
+    padding-right: 10px;
+}
+
+.menu li a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.content {
+    margin-top: 60px;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+  
+    padding: 20px;
+}
+
+.section h1 {
+    text-align: center;
 }
